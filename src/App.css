@@ -1,0 +1,223 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* custom changes */
+/* text  */
+h3 span, h5 span{
+  color: var(--accentdark);
+}
+.h3Title{
+  color: var(--imptext);
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+.h5Time{
+  background-color: #baf2ff53;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-size: 20px;
+  padding: 5px;
+}
+.h3Content{
+  text-align: center;
+  font-size: 30px;
+}
+
+/* modal  */
+.btn{
+  border-radius: 10px;
+}
+.modal{
+  backdrop-filter: blur(3px) !important;
+}
+.modal-content{
+  border-radius: 10px;
+}
+.modal-body{
+  text-align: center;
+  margin: 10px;
+}
+.formContent{
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  color: var(--gray);
+  border: 1px solid var(--black);
+  background: #fff;
+  border: 1px solid var(--accent);
+  width: 40%;
+
+  font-weight: 600;
+  resize: none;
+  transition: 0.3s;
+}
+.formContent:focus{
+  outline: none;
+  color: var(--imptext);
+  border: 2px solid var(--accent);
+  background: var(--accentdim2);
+  box-shadow: var(--shadowsmall);
+  user-select: all;
+  transition: 0.3s;
+}
+#formTitle{
+  width: 90%;
+  height: 50px;
+}
+#formContent{
+  width: 90%;
+}
+#formTime{
+  margin-left: 5%;
+}
+.btn{
+  font-weight: 600;
+}
+
+.redirectPage{
+  margin-top: 20%;
+}
+.redirectPage h1, .redirectPage h2{
+  color: #690404;
+  text-align: center;
+  background-color: #2830340c;
+  margin: auto;
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 5px;
+}
+
+/* context  */
+.Paper{
+  background-color: var(--accentdim2);
+  border-radius: 20px;
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+.App{
+  margin-top: 100px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btndel{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* footer  */
+.footer{
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+  bottom: 0%;
+  background-color: rgba(234, 249, 255, 0.6) !important;
+  backdrop-filter: blur(5px) !important;
+  display: flex;
+  justify-content: center;
+}
+
+.addBlog{
+  text-align: center;
+}
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+@keyframes slide1 {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.moveUp {
+    animation: 0.4s ease-out 0s 1 slide1;
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.moveDown {
+  animation: 0.4s ease-out 0s 1 slide2;
+}
+
+@keyframes slide3 {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.moveLeft  {
+    animation: 0.4s ease-out 0s 1 slide3;
+}
+
+@keyframes slide4 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.moveRight {
+  animation: 0.4s ease-out 0s 1 slide4;
+}
