@@ -20,12 +20,12 @@ const AddBlog = () => {
   const [newDate, setNewDate] = useState(0);
   
 // eslint-disable-next-line
-  const [note, setUsers] = useState([]);
-  const noteCollectionRef = collection(db, "note");
+  const [blog, setUsers] = useState([]);
+  const blogCollectionRef = collection(db, "blog");
   const navigate = useNavigate();
 
   const createUser = async () => {
-    await addDoc(noteCollectionRef, {
+    await addDoc(blogCollectionRef, {
       title: newTitle,
       content: newContent,
       time: newTime,
@@ -36,7 +36,7 @@ const AddBlog = () => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const data = await getDocs(noteCollectionRef);
+      const data = await getDocs(blogCollectionRef);
       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
@@ -48,7 +48,7 @@ const AddBlog = () => {
     <div classTitle='App' className='noSelect'>
       <Header />
       <div className='addBlog moveUp'>
-        <h1>Create a new Blog</h1>
+        <h1 style={{marginTop:"85px"}}>Create a new Blog</h1>
         <input
           placeholder='Title...'
           id='formTitle'

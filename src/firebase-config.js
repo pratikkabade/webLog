@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAfIlgXLsBxnl8wio_R4K3J7yMPAP4fRdM",
-  authDomain: "notes-demoapp.firebaseapp.com",
-  projectId: "notes-demoapp",
-  storageBucket: "notes-demoapp.appspot.com",
-  messagingSenderId: "590614364641",
-  appId: "1:590614364641:web:c771a820a55df2b76d52a0",
-  measurementId: "G-ZS7JRV3ND2"
+  apiKey: "AIzaSyBmnljGUJtxdcUJn6kJcsCvOH-ZrM5qnDY",
+  authDomain: "store-paper.firebaseapp.com",
+  projectId: "store-paper",
+  storageBucket: "store-paper.appspot.com",
+  messagingSenderId: "811649422631",
+  appId: "1:811649422631:web:0d4a785b9659e1823dc502",
+  measurementId: "G-GW099G2NZP"
 };
 
 const app = initializeApp(firebaseConfig);

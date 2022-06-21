@@ -18,19 +18,19 @@ function reload() {
   }
   
   function Home() {  
-    const [note, setUsers] = useState([]);
-    const noteCollectionRef = collection(db, "note");
+    const [blog, setUsers] = useState([]);
+    const blogCollectionRef = collection(db, "blog");
   
   
     const deleteUser = async (id) => {
-      const userDoc = doc(db, "note", id);
+      const userDoc = doc(db, "blog", id);
       await deleteDoc(userDoc);
       reload();
     };
   
     useEffect(() => {
       const getUsers = async () => {
-        const data = await getDocs(noteCollectionRef);
+        const data = await getDocs(blogCollectionRef);
         setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
       };
   
@@ -58,7 +58,7 @@ function reload() {
         <div classTitle='App' className="noSelect">
           <Header />
           <div className='App '>
-            {note.map((user) => {
+            {blog.map((user) => {
               return (
                 <div className='Paper moveDown'>
                   {" "}
